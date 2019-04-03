@@ -1,18 +1,18 @@
 import React from "react";
 //import "./PointOfLight.css";
 
-const randomSize = Math.floor(Math.random() * 20) + 1;
-const randomLocationT = Math.floor(Math.random() * 700) + 1;
-const randomLocationS = Math.floor(Math.random() * 700) + 1;
+const randomSize = Math.floor(Math.random() * 10) + 1;
+const randomLocationV = Math.floor(Math.random() * 700) + 1;
+const randomLocationH = Math.floor(Math.random() * 1200) + 1;
 
 const starStyle = {
-  backgroundColor: "whitesmoke",
+  backgroundColor: "white",
   height: randomSize,
   width: randomSize,
   borderRadius: "50%",
   position: "relative",
-  top: randomLocationT,
-  left: randomLocationS
+  top: randomLocationV,
+  left: randomLocationH
 };
 
 const PointOfLight = () => {
