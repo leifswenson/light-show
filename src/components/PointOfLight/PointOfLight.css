@@ -1,0 +1,7 @@
+.point-of-light {
+  background-color: whitesmoke;
+  height: 1px;
+  width: 1px;
+  border-radius: 50%;
+  position: relative;
+}
