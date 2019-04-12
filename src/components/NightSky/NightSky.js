@@ -4,29 +4,32 @@ import "./NightSky.css";
 
 export default class NightSky extends Component {
   // a function to randomly size and position a circle
-  oneStar = () => {
-    const randomSize = Math.floor(Math.random() * 10) + 1;
-    const randomVertical = Math.floor(Math.random() * 700) + 1;
+  oneStar = i => {
+    const randomSize = Math.floor(Math.random() * 6) + 1;
+    const randomVertical = Math.floor(Math.random() * 700) + 110;
     const randomHorizontal = Math.floor(Math.random() * 1200) + 1;
     const starStyle = {
       backgroundColor: "white",
       height: randomSize,
       width: randomSize,
       borderRadius: "50%",
-      position: "relative",
+      position: "fixed",
       top: randomVertical,
       left: randomHorizontal
     };
-    return <div style={starStyle} className="star animate-star" />;
+    return <div style={starStyle} key={i} className="star animate-star" />;
   };
 
   multiStar = () => {
-    // randomly generate a number or stars between 300-900
-    const randomNumStars = Math.floor(Math.random() * 600) + 300;
+    // randomly generate a number or stars
+    const randomNumStars = Math.floor(Math.random() * 1800) + 800;
+    const starArr = [];
 
     for (let i = 0; i < randomNumStars; i++) {
-      return this.oneStar();
+      starArr.push(this.oneStar(i));
     }
+
+    return starArr;
   };
 
   render() {

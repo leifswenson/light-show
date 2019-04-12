@@ -5,7 +5,7 @@ const Header = props => {
     <div className="header">
       <h1>Light Show</h1>
       <p>Move your mouse to create your own constellation.</p>
-      <button onClick={props.onClick}>New Sky</button>
+      {/* <button onClick={props.onClick}>New Sky</button> */}
     </div>
   );
 };
